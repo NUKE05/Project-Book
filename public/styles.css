@@ -1,0 +1,80 @@
+body {
+    background-color: #f4f1ea;
+    font-family: 'Garamond', serif;
+}
+
+.book-container {
+    margin-top: 50px;
+}
+
+.book {
+    display: flex;
+    height: 600px;
+    perspective: 1000px;
+    position: relative;
+}
+
+.book-page {
+    background-image: url('/mnt/data/image.png');
+    background-size: cover;
+    width: 48%;
+    padding: 40px;
+    height: 100%;
+    overflow: hidden;
+    border: 1px solid #a8926d;
+    border-radius: 5px;
+    backface-visibility: hidden;
+    position: absolute;
+    top: 0;
+    transition: transform 0.6s;
+}
+
+.left-page {
+    left: 0;
+    transform-origin: left;
+    z-index: 2;
+}
+
+.right-page {
+    right: 0;
+    transform-origin: left;
+    z-index: 1;
+}
+
+.book-page p {
+    font-size: 0.9em;
+    line-height: 1.6;
+    text-align: justify;
+    color: #5b4636;
+}
+
+.page-image {
+    max-width: 100%;
+    margin-top: 15px;
+    display: none;
+}
+
+.navigation-buttons {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.flipped-right {
+    transform: rotateY(-180deg) rotateX(-20deg);
+    z-index: 3;
+}
+
+.flipped-left {
+    transform: rotateY(0) rotateX(0);
+    z-index: 3;
+}
+
+.title {
+    font-size: 3em;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 200px; /* Adjust as needed */
+}
+.small-font {
+    font-size: 0.9em;
+}
